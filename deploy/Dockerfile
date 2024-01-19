@@ -10,5 +10,3 @@ COPY Gemfile.lock $APP_ROOT/Gemfile.lock
 RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs vim
 COPY . /myapp
 ENTRYPOINT [ "entrypoint.sh" ]
-
-EXPOSE 3000
