@@ -4,5 +4,8 @@ RUN mkdir /myapp
 WORKDIR /myapp
 ADD Gemfile /myapp/Gemfile
 ADD Gemfile.lock /myapp/Gemfile.lock
-RUN bundle install
+RUN bundle install \
+  bundle exec rails assets:precompile \
+  bundle exec rails assets:clean \
+  bundle exec rails db:migrate
 ADD . /myapp
