@@ -11,4 +11,4 @@ RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs vi
 COPY . /myapp
 ENTRYPOINT [ "entrypoint.sh" ]
 
-EXPOSE 8080
+EXPOSE 3000
