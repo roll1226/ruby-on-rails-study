@@ -14,3 +14,5 @@ console:
 	docker compose exec web rails console
 credentials_edit:
 	docker compose exec web rails credentials:edit
+web:
+	docker compose exec web bash
