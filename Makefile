@@ -22,5 +22,7 @@ web:
 	docker compose exec web bash
 controller_%:
 	docker compose exec web rails ${@:controller_%=%} controller $(CONTROLLER_NAME)
+test:
+	docker compose exec web rails test
 
-.PHONY: dbActions db_% controllerActions controller_%
+.PHONY: dbActions db_% controllerActions controller_% test
